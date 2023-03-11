@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\RepositorioGitHub.App",
+    "\\RepositorioGitHub.App\\Controllers",
+    "\\RepositorioGitHub.App\\Views",
+    "\\RepositorioGitHub.App\\Views\\Home",
+    "\\RepositorioGitHub.Business"
+  ],
+  "SelectedNode": "\\RepositorioGitHub.App\\Controllers\\HomeController.cs",
+  "PreviewInSolutionExplorer": false
+}

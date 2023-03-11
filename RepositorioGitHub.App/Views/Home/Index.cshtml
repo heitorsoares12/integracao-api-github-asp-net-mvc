@@ -1,0 +1,49 @@
+﻿@model RepositorioGitHub.Dominio.ActionResult<RepositorioGitHub.Dominio.GitHubRepositoryViewModel>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<h2>Meu Repositório</h2>
+<br />
+<br />
+<div class="row">
+    <div class="col-md-12">
+        <table class="table">
+            <tr>
+                <th>Nome</th>
+                <th>Proprietario</th>
+                <th>Nome Completo</th>
+                <th>URL</th>
+                <th></th>
+            </tr>
+
+            @if (Model != null && Model.Results != null)
+            {
+                foreach (var item in Model.Results)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Owner.Login)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Full_name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Url)
+                        </td>
+
+                        <td>
+                            @Html.ActionLink("Detalhe", "Details", new { id = item.Name })
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+</div>
+
